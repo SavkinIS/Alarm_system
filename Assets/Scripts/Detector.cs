@@ -2,12 +2,12 @@ using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
-public class Trigger : MonoBehaviour
+public class Detector : MonoBehaviour
 {
-    public event Action TriggerEnter;
+    public event Action<Collider> TriggerEnter;
 
     private void OnTriggerEnter(Collider other)
     {
-        TriggerEnter?.Invoke();
+        TriggerEnter?.Invoke(other);
     }
 }

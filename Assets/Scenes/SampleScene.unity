@@ -581,6 +581,7 @@ GameObject:
   - component: {fileID: 340671236}
   - component: {fileID: 340671238}
   - component: {fileID: 340671237}
+  - component: {fileID: 340671239}
   m_Layer: 0
   m_Name: Thief
   m_TagString: Untagged
@@ -717,6 +718,18 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &340671239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340671231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6db200b35d6d47e0b6b402a447e05d0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &358683376
 GameObject:
   m_ObjectHideFlags: 0
@@ -3855,7 +3868,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e78c76b42ab944fb9a373d429887bfcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _trigger: {fileID: 2068851240}
   _audioSource: {fileID: 1450266970}
   _fadeSpeed: 0.2
 --- !u!1 &1411966264
@@ -5106,6 +5118,52 @@ Transform:
   - {fileID: 1553147771}
   m_Father: {fileID: 110974018}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!1 &1840101443
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1840101445}
+  - component: {fileID: 1840101444}
+  m_Layer: 0
+  m_Name: House
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1840101444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840101443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6ad9f52b5ea4389833c90ed0f038f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detector: {fileID: 2068851240}
+  _alarmSystem: {fileID: 1401509430}
+--- !u!4 &1840101445
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840101443}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1927019483
 GameObject:
   m_ObjectHideFlags: 0
@@ -5469,7 +5527,7 @@ GameObject:
   - component: {fileID: 2068851237}
   - component: {fileID: 2068851240}
   m_Layer: 0
-  m_Name: Trigger
+  m_Name: Detector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5828,3 +5886,4 @@ SceneRoots:
   - {fileID: 340671235}
   - {fileID: 186923565}
   - {fileID: 1401509429}
+  - {fileID: 1840101445}
